@@ -116,5 +116,9 @@
     "presets": [
       "react-app"
     ]
+  },
+  "devDependencies": {
+    "antd": "^3.16.0",
+    "babel-plugin-import": "^1.11.0"
   }
 }
