@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import  {
     Form, Icon, Input, Button, Checkbox,
 } from 'antd';
@@ -16,13 +17,13 @@ class Login extends Component {
 
 
     handleSubmit = (e)=> {
-        console.log(this.props)
+        //console.log(this.props)
         e.preventDefault();
             this.props.form.validateFields(async (err, values) => {
             if (!err) {
                 console.log('Received values of form: ', values);
-                // let res = await this.props.signin(values.username, values.password);
-                // console.log(res);
+                let res = await this.props.signin(values.username, values.password);
+                console.log(res);
             }
         });
     }
@@ -32,7 +33,8 @@ class Login extends Component {
     render() {
         
         const { getFieldDecorator } = this.props.form;
-        
+        const { signin } = this.props;
+        console.log(signin)
         return (
             <div className="login">
                 <div className="login_container">
@@ -78,10 +80,10 @@ class Login extends Component {
     }
 
 }
-Login = connect(() => {
-    
-}, () => {
-        actions
+Login = connect((state) => {
+    console.log(state)
+}, (dispatch) => {
+        bindActionCreators(actions, dispatch)
 })(Login);
 Login = Form.create()(Login);
 export default Login;

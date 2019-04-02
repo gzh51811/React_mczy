@@ -12,7 +12,7 @@ import { FETCH_TOKEN } from './type'
 
 
 
-function fetchToken() {
+export function fetchToken() {
     return {
         type: FETCH_TOKEN
     }
@@ -20,26 +20,27 @@ function fetchToken() {
 
 
 
-function signin(username, password) {
+export function signin(username, password) {
    //异步回调，可用redux-sagajiejue
+    return{
+        type: FETCH_TOKEN
+        
+    }
+}
+
+function signin2(username, password) {
     return async (dispatch) => {
-        try {
-            dispatch(fetchToken());
-
-            const res = await axios.post('/aip/login', {
-                params: {
-                    username,
-                    password
-                }
-            });
-
-            console.log(res)
-        } catch (error) {
-            
-        }
+        
+        console.log(212)
+        
     }
 }
 
 export {
-    signin
+    signin2
+}
+
+export default {
+    signin,
+    fetchToken
 }
