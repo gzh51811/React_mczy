@@ -13,10 +13,12 @@ let Dibu = () => {
                     </span>
                 </li>
                 <li>
-                    <span className="bar-img">
-                        <i className="find"></i>
-                        <p>发现</p>
-                    </span>
+                    <a href="https://www.10street.cn/wap/tmpl/member/discover.html">
+                        <span className="bar-img">
+                            <i className="find"></i>
+                            <p>发现</p>
+                        </span>
+                    </a>
                 </li>
                 <li>
                     <span className="bar-img">

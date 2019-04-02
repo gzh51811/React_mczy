@@ -1,6 +1,5 @@
 import React from 'react';
 import './Home.scss';
-import Dibu from './Dibu';
 import { Carousel, BackTop } from 'antd';
 
 let Home = () => {
@@ -679,7 +678,43 @@ let Home = () => {
                     </div>
                 </div>
             </div >
-            <Dibu />
+            <div className='footer'>
+                <div className='diandi'></div>
+                <div className="bottom-bar-pannel J-bridge" style={{ zIndex: "10" }}>
+                    <ul className="tab5">
+                        <li className="selected">
+                            <span className="bar-img">
+                                <i className="index"></i>
+                                <p>首页</p>
+                            </span>
+                        </li>
+                        <li>
+                            <span className="bar-img">
+                                <i className="find"></i>
+                                <p>发现</p>
+                            </span>
+                        </li>
+                        <li>
+                            <span className="bar-img">
+                                <i className="gift"></i>
+                                <p>礼礼相送</p>
+                            </span>
+                        </li>
+                        <li>
+                            <span className="bar-img">
+                                <i className="cart"></i>
+                                <p>购物车</p>
+                            </span>
+                        </li>
+                        <li>
+                            <span className="bar-img">
+                                <i className="user"></i>
+                                <p>我的</p>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 }
