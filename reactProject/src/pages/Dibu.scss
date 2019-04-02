@@ -1,0 +1,69 @@
+.footer{
+    .diandi{
+        height: .666667*3rem;
+        width: 100%;
+    }
+    .bottom-bar-pannel {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        font-size: 0;
+        height: .666667*4rem;
+        box-sizing: border-box;
+        border-top: 0.05rem solid #e9ebee;
+        background: #fff;
+        z-index: 10;
+        ul {
+            overflow: hidden;
+            height: 100%;
+            position: relative;
+            li {
+                float: left;
+                width: 20%;
+                text-align: center;
+                height: 100%;
+                line-height: 1rem;
+                font-size: .133333*4rem;
+                position: relative;
+                .bar-img {
+                    display: inline-block;
+                    height: 100%;
+                    p {
+                        color: #C37B7B;
+                    }
+                    i {
+                        display: block;
+                        position: relative;
+                        padding-top: 0.05rem;
+                    }
+                    i {
+                        width: .333333*4rem;
+                        height: .333333*4rem;
+                        margin: 0.12rem auto 0.05rem auto;
+                    }
+                    i.index {
+                        background: url(./../assets/hf1.png) no-repeat 50% 50%;
+                        background-size: 100%;
+                    }
+                    i.find {
+                        background: url(./../assets/hf2.png) no-repeat 50% 50%;
+                        background-size: 100%;
+                    }
+                    i.gift {
+                        background: url(./../assets/hf3.png) no-repeat 50% 50%;
+                        background-size: 100%;
+                    }
+                    i.cart {
+                        background: url(./../assets/hf4.png) no-repeat 50% 50%;
+                        background-size: 100%;
+                    }
+                    i.user {
+                        background: url(./../assets/hf5.png) no-repeat 50% 50%;
+                        background-size: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
