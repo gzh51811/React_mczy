@@ -280,21 +280,21 @@ let Home = () => {
                         </div>
                         <div className="swiper-container GoodsImgSwipe swiper-container-horizontal">
                             <div className="swiper-wrapper">
-                                <div className="swiper-slide swiper-slide-prev" style={{ position: 'absolute', left: '-9rem' }}>
+                                <div className="swiper-slide swiper-slide-prev" style={{ position: 'absolute', left: '-4.5rem' }}>
                                     <div className="swipercon" >
                                         <img src={require("./../assets/bf1.png")} />
                                         <div className="ellipsis name">优乐随身K歌音响</div>
                                         <div className="ellipsis price">会员价：<span>￥449</span></div>
                                     </div>
                                 </div>
-                                <div className="swiper-slide swiper-slide-active" style={{ position: 'absolute', left: '6rem' }}>
+                                <div className="swiper-slide swiper-slide-active" style={{ position: 'absolute', left: '2rem' }}>
                                     <div className="swipercon">
                                         <img src={require("./../assets/bf1.png")} />
                                         <div className="ellipsis name">素士X3电动牙刷</div>
                                         <div className="ellipsis price">会员价：<span>￥269</span></div>
                                     </div>
                                 </div>
-                                <div className="swiper-slide swiper-slide-next" style={{ position: 'absolute', right: '-9rem' }}>
+                                <div className="swiper-slide swiper-slide-next" style={{ position: 'absolute', right: '-4.5rem' }}>
                                     <div className="swipercon">
                                         <img src={require("./../assets/bf1.png")} />
                                         <div className="ellipsis name">品罗小怪兽榨汁机</div>
@@ -323,7 +323,7 @@ let Home = () => {
                     </div>
                     <div className="swiper-container oneRowOneBlock marBtw mt5 swiper-container-horizontal">
                         <div className="swiper-wrapper">
-                            <div className="swiper-slide swiper-slide-active" style={{ width: "4.733333*4rem" }}>
+                            <div className="swiper-slide swiper-slide-active" style={{ width: "4.733333*2rem" }}>
                                 <a>
                                     <img className="border-radio-15" src="https://image.10street.cn/image/5e/39/5e39fbde272033a96ad5922d9a5de1c6.jpg" />
                                 </a>
@@ -374,7 +374,7 @@ let Home = () => {
                     </div>
                     <div className="swiper-container oneRowOneBlock marBtw mt5 swiper-container-horizontal">
                         <div className="swiper-wrapper">
-                            <div className="swiper-slide swiper-slide-active" style={{ width: "4.733333*4rem" }}>
+                            <div className="swiper-slide swiper-slide-active" style={{ width: "4.733333*2rem" }}>
                                 <a>
                                     <img className="border-radio-15" src="https://image.10street.cn/image/7c/b6/7cb66f3716476d7ef3f9019bb552b8d9.jpg" />
                                 </a>
@@ -425,7 +425,7 @@ let Home = () => {
                     </div>
                     <div className="swiper-container oneRowOneBlock marBtw mt5 swiper-container-horizontal">
                         <div className="swiper-wrapper">
-                            <div className="swiper-slide swiper-slide-active" style={{ width: "4.733333*4rem" }}>
+                            <div className="swiper-slide swiper-slide-active" style={{ width: "4.733333*2rem" }}>
                                 <a>
                                     <img className="border-radio-15" src="https://image.10street.cn/image/3d/a5/3da5c2c6272d9c871f120d4f351b8b50.jpg" />
                                 </a>
@@ -476,7 +476,7 @@ let Home = () => {
                     </div>
                     <div className="swiper-container oneRowOneBlock marBtw mt5 swiper-container-horizontal">
                         <div className="swiper-wrapper">
-                            <div className="swiper-slide swiper-slide-active" style={{ width: "4.733333*4rem" }}>
+                            <div className="swiper-slide swiper-slide-active" style={{ width: "4.733333*2rem" }}>
                                 <a>
                                     <img className="border-radio-15" src="https://image.10street.cn/image/9b/37/9b37a7b074f4bf234e8cbc2a23e39a8a.jpg" />
                                 </a>
@@ -527,7 +527,7 @@ let Home = () => {
                     </div>
                     <div className="swiper-container oneRowOneBlock marBtw mt5 swiper-container-horizontal">
                         <div className="swiper-wrapper">
-                            <div className="swiper-slide swiper-slide-active" style={{ width: "4.733333*4rem" }}>
+                            <div className="swiper-slide swiper-slide-active" style={{ width: "4.733333*2rem" }}>
                                 <a>
                                     <img className="border-radio-15" src="https://image.10street.cn/image/eb/1d/eb1d35035cde4f0a9965d03df7769dd7.jpg" />
                                 </a>
@@ -578,7 +578,7 @@ let Home = () => {
                     </div>
                     <div className="swiper-container oneRowOneBlock marBtw mt5 swiper-container-horizontal">
                         <div className="swiper-wrapper">
-                            <div className="swiper-slide swiper-slide-active" style={{ width: "4.733333*4rem" }}>
+                            <div className="swiper-slide swiper-slide-active" style={{ width: "4.733333*2rem" }}>
                                 <a>
                                     <img className="border-radio-15" src="https://image.10street.cn/image/f3/14/f314f02419e4236bae7ca14eb04e2dc7.jpg" />
                                 </a>
