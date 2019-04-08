@@ -23,7 +23,7 @@ export function fetchToken() {
 export function signin(username, password) {
    //异步回调，可用redux-sagajiejue
     return{
-        type: FETCH_TOKEN
+        type: FETCH_TOKEN 
         
     }
 }
