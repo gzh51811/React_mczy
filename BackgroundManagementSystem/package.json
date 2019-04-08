@@ -118,7 +118,12 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "@babel/plugin-proposal-decorators": "^7.4.0",
     "antd": "^3.16.0",
-    "babel-plugin-import": "^1.11.0"
+    "axios": "^0.18.0",
+    "babel-plugin-import": "^1.11.0",
+    "node-sass": "^4.11.0",
+    "react-router-dom": "^5.0.0"
   }
 }

@@ -345,6 +345,10 @@ module.exports = function (webpackEnv) {
                       },
                     },
                   ],
+                  //ES7装饰器
+                  ['@babel/plugin-proposal-decorators', { legacy: true }],
+                  '@babel/plugin-proposal-class-properties',
+                  //antddesign 配置
                   ['import', {
                     "libraryName": "antd",
                     "libraryDirectory": "es",

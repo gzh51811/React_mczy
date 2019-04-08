@@ -1,0 +1,46 @@
+html{
+    user-select: none;
+}
+
+#components-layout-demo-custom-trigger .trigger {
+    font-size: 18px;
+    line-height: 64px;
+    padding: 0 24px;
+    cursor: pointer;
+    transition: color .3s;
+    z-index: 1;
+}  
+
+#components-layout-demo-custom-trigger .trigger:hover {
+    color: #1890ff;
+    z-index: 1;
+}
+  
+#components-layout-demo-custom-trigger .logo {
+    height: 32px;
+    background: rgba(255,255,255,.2);
+    margin: 16px;
+}
+
+.logo {
+    text-align: center; 
+    height: 65px;
+    width: auto;
+    color: white;
+    line-height: 65px;
+    font-weight: bold;
+    text-shadow:2px 2px 8px #ccc;
+    overflow: hidden;
+}
+
+.userlogin{
+    float: right;
+    top:20px;
+    right:30px;
+}
+
+.home_main .bread{
+    margin-left: 20px;
+    line-height: 3;
+    font-size: 12px;
+}
