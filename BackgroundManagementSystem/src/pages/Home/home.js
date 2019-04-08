@@ -7,7 +7,7 @@ import Slider from './Slider'
 import Main from './Main'
 import './Home.css'
 
-@withRouter
+
 
 class Home extends Component {
 
@@ -24,6 +24,8 @@ class Home extends Component {
         );
     }
 }
+
+Home = withRouter(Home)
 
 export default Home
 
