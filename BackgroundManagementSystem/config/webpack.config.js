@@ -208,72 +208,6 @@ module.exports = function (webpackEnv) {
                             ascii_only: true,
                         },
                     },
-<<<<<<< HEAD
-                  ],
-                  //ES7装饰器
-                  ['@babel/plugin-proposal-decorators', { legacy: true }],
-                  '@babel/plugin-proposal-class-properties',
-                  //antddesign 配置
-                  ['import', {
-                    "libraryName": "antd",
-                    "libraryDirectory": "es",
-                    "style": "css" // `style: true` 会加载 less 文件
-                  }]
-                ],
-                // This is a feature of `babel-loader` for webpack (not Babel itself).
-                // It enables caching results in ./node_modules/.cache/babel-loader/
-                // directory for faster rebuilds.
-                cacheDirectory: true,
-                cacheCompression: isEnvProduction,
-                compact: isEnvProduction,
-              },
-            },
-            // Process any JS outside of the app with Babel.
-            // Unlike the application JS, we only compile the standard ES features.
-            {
-              test: /\.(js|mjs)$/,
-              exclude: /@babel(?:\/|\\{1,2})runtime/,
-              loader: require.resolve('babel-loader'),
-              options: {
-                babelrc: false,
-                configFile: false,
-                compact: false,
-                presets: [
-                  [
-                    require.resolve('babel-preset-react-app/dependencies'),
-                    { helpers: true },
-                  ],
-                ],
-                cacheDirectory: true,
-                cacheCompression: isEnvProduction,
-
-                // If an error happens in a package, it's possible to be
-                // because it was compiled. Thus, we don't want the browser
-                // debugger to show the original code. Instead, the code
-                // being evaluated would be much more helpful.
-                sourceMaps: false,
-              },
-            },
-            // "postcss" loader applies autoprefixer to our CSS.
-            // "css" loader resolves paths in CSS and adds assets as dependencies.
-            // "style" loader turns CSS into JS modules that inject <style> tags.
-            // In production, we use MiniCSSExtractPlugin to extract that CSS
-            // to a file, but in development "style" loader enables hot editing
-            // of CSS.
-            // By default we support CSS Modules with the extension .module.css
-            {
-              test: cssRegex,
-              exclude: cssModuleRegex,
-              use: getStyleLoaders({
-                importLoaders: 1,
-                sourceMap: isEnvProduction && shouldUseSourceMap,
-              }),
-              // Don't consider CSS imports dead code even if the
-              // containing package claims to have no side effects.
-              // Remove this when webpack adds a warning or an error for this.
-              // See https://github.com/webpack/webpack/issues/6571
-              sideEffects: true,
-=======
                     // Use multi-process parallel running to improve the build speed
                     // Default number of concurrent runs: os.cpus().length - 1
                     parallel: true,
@@ -304,7 +238,6 @@ module.exports = function (webpackEnv) {
             splitChunks: {
                 chunks: 'all',
                 name: false,
->>>>>>> 3651b9b2ab97198108192b600adc3eb7158061f4
             },
             // Keep the runtime chunk separated to enable long term caching
             // https://twitter.com/wSokra/status/969679223278505985
