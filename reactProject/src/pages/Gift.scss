@@ -1,0 +1,395 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul,
+li {
+   list-style: none;
+}
+a {
+   text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+html,
+body {
+  height: 100%;
+}
+#gift{
+    background-color: #f5f5f5;
+    .ant-carousel .slick-dots {
+        position: absolute;
+        bottom:0.25rem;
+        display: block;
+        width: 100%;
+        height: 5px;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        list-style: none;
+        li {
+            position: relative;
+            display: inline-block;
+            margin: 0 4px;
+            padding: 0;
+            text-align: center;
+            vertical-align: top;
+            button {
+                display: block;
+                width: 7px;
+                height: 7px;
+                border-radius: 50%;
+                padding: 0;
+                color: transparent;
+                font-size: 0;
+                background: #fff;
+                border: 0;
+                border-radius: 1px;
+                outline: none;
+                cursor: pointer;
+                opacity: 0.3;
+                transition: all 0.5s;
+            }
+        }
+        li.slick-active button {
+            width: 7px;
+            border-radius: 50%;
+            background: #fff;
+            opacity: 1;
+        }
+    }
+    #header{
+        background: #DB3D38;
+        position: fixed;
+        z-index: 5;
+        width: 100%;
+        display: flex;
+        height: 1.2rem;
+            .header-wrap{
+                flex: 1;
+                margin: .093333*2rem 0;
+                padding-left: .266667rem;
+                .header-inp{
+                    height: .4*2rem;
+                    border-radius: 0.75rem;
+                    line-height: 0.9rem;
+                    background-color:rgba(235,235,235,0.4);
+                    .icon {
+                        display: block;
+                        float: left;
+                        width: .266667*2rem;
+                        height: .266667*2rem;
+                        margin: .06*2rem .06*2rem 0 .086667*2rem;
+                        background-repeat: no-repeat;
+                        background: url(./../assets/sousuo.png) no-repeat center center;
+                        background-size: 100%;
+                    }
+                    .search-input{
+                        margin-left: .5*2rem;
+                        line-height: .3*2rem;
+                        text-align: left;
+                        color: #fff;
+                        padding: .066667*2rem 0;
+                        font-size: .2*2rem;
+                        display: block;
+                    }
+                }
+            }
+            .header-r{
+                width: 1.2rem;
+                height: 1.2rem;
+                padding:.26rem 0;
+                img{
+                    width: 0.6rem;
+                    height: 0.6rem;
+                }
+            }
+        }
+    .dianding{
+        height: 1rem;
+        width: 100%;
+    }
+    #conten{
+        .fix-block-r {
+            width: .666667*2rem;
+            position: fixed;
+            z-index: 5;
+            right: .166667*2rem;
+            bottom: .866667*2rem;
+            a {
+                display: block;
+                width: .533333*2rem;
+                height: .533333*2rem;
+                background: rgba(255,255,255,0.85);
+                border-radius: 100%;
+                i {
+                    width: 100%;
+                    height: 100%;
+                    display: block;
+                    background-position: 50% 50%;
+                    background-repeat: no-repeat;
+                    background-size: 100%;
+                    opacity: 0.6;
+                    background-image: url(./../assets/gotoph.png);
+                }
+            }
+            a.gotop-btn {
+                margin-top: .093333*2rem;
+            }
+        }
+        .nctouch-main-layout {
+            display: block;
+            background-color: #f5f5f5;
+            height: 100%;
+        }
+        .nctouch-main-layout {
+            overflow: hidden;
+            position: relative;
+            .goGuide {
+                position: absolute;
+                right: 0.425rem;
+                bottom: 0.25rem;
+                width: 1.25rem;
+                height: 1.25rem;
+                border-radius: 0.625rem;
+                text-align: center;
+                z-index: 1;
+                background: url(./../assets/czzn.png) no-repeat -0.05rem -0.05rem/1.45rem 1.45rem;
+            }
+            .swipe-wrap {
+                overflow: hidden;
+                position: relative;
+                height: 2.333333*2rem;
+                .item{
+                    width: 5*2rem;
+                    float: left;
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .giftIndexTab {
+            height: 2.853333*2rem;
+            background: #fff;
+            width: 100%;
+            
+            overflow: hidden;
+            .clearfix {
+                zoom: 1;
+            }
+            .ant-menu-horizontal {
+                line-height: 46px;
+                white-space: nowrap;
+                border: 0;
+                box-shadow: none;
+            }
+            ul {
+                width: 100%;
+                overflow: hidden;
+                .fl{
+                    float: left;
+                }
+                li {
+                    width: 33.33%;
+                    height: 100%;
+                    line-height: 100%;
+                    text-align: center;
+                    color: #333;
+                    font-size: 0.35rem;
+                    display: inline-block;
+                    padding: 0 .106667*2rem;
+                    line-height: 0.9rem;
+                    height: 1.1rem;
+                    .selected {
+                        color: #D2231C;
+                        border-color: #D2231C;
+                    }
+                }
+            }
+            
+        }
+        .ant-menu-horizontal > .ant-menu-item:hover, .ant-menu-horizontal > .ant-menu-submenu:hover, .ant-menu-horizontal > .ant-menu-item-active, .ant-menu-horizontal > .ant-menu-submenu-active, .ant-menu-horizontal > .ant-menu-item-open, .ant-menu-horizontal > .ant-menu-submenu-open, .ant-menu-horizontal > .ant-menu-item-selected, .ant-menu-horizontal > .ant-menu-submenu-selected {
+            color: #D2231C;
+            border-bottom: 3px solid #D2231C;
+        }
+        .ant-menu-horizontal .ant-menu-item{
+            margin-top: .093333*2rem;
+        }
+        .fixed-Width {
+            min-width: 4.266667*2rem;
+            max-width: 8.533333*2rem;
+            margin: 0 auto;
+        }
+        .nctouch-home-nav {
+            background-color: #FFF;
+            position: relative;
+            z-index: 0;
+            ul {
+                font-size: 0;
+                height: 1.106667*2rem;
+                overflow: hidden;
+                li {
+                    float: left;
+                    width: 20%;
+                    padding: 0;
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .xtb{
+            height: 2.213333*2rem;
+        }
+        .nctouch-home-block {
+            width: 100%;
+            clear: both;
+        }
+        .item-pic-list {
+            font-size: 0;
+            width: 100%;
+            margin: 0 auto;
+            overflow: hidden;
+            li {
+                width: 33.3%;
+                float: left;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+        .item-pic {
+            font-size: 0;
+            width: 100%;
+            margin: 0 auto;
+            img {
+                width: 100%;
+            }
+        }
+        ul.goods-list {
+            font-size: 0;
+            margin-bottom: 0.25rem;
+            text-align: left;
+            li {
+                background-color: #FFF;
+                vertical-align: top;
+                display: inline-block;
+                width: 47%;
+                height: 7.3rem;
+                overflow: hidden;
+                border-radius: 0.1rem;
+                margin: 0.25rem 1% 0.25rem 1%;
+                .goods-pic {
+                    width: 100%;
+                    img {
+                        width: 100%;
+                        height: 2.5*2rem;
+                    }
+                }
+                dl {
+                    padding: 0.1rem;
+                    dt.goods-name {
+                        display: block;
+                        font-size: .2*2rem;
+                        line-height: .25*2rem;
+                        color: #232326;
+                        height: 1rem;
+                        overflow: hidden;
+                    }
+                    dd.goods-price {
+                        display: block;
+                        font-size: 0.3rem;
+                        line-height: 0.6rem;
+                        height: 0.6rem;
+                        color: #D1231C;
+                        border-top: solid 0.05rem #EEE;
+                        em {
+                            font-size: 0.4rem;
+                            font-weight: 600;
+                        }
+                    }
+                    dd.goods-prices {
+                        border-top: 0;
+                    }
+                    dd.goods-oriPrice {
+                        font-size: 0.3rem;
+                        color: #a5a5a5;
+                    }
+                }
+            }
+        }
+    }
+    .footer{
+        .diandi{
+            height: .666667*1.5rem;
+            width: 100%;
+        }
+        .bottom-bar-pannel {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            font-size: 0;
+            height: .666667*2rem;
+            box-sizing: border-box;
+            border-top: 0.025rem solid #e9ebee;
+            background: #fff;
+            z-index: 10;
+            ul {
+                overflow: hidden;
+                height: 100%;
+                position: relative;
+                li {
+                    float: left;
+                    width: 20%;
+                    text-align: center;
+                    height: 100%;
+                    line-height: 0.5rem;
+                    font-size: .133333*2rem;
+                    position: relative;
+                    .bar-img {
+                        display: inline-block;
+                        height: 100%;
+                        p {
+                            color: #C37B7B;
+                        }
+                        i {
+                            display: block;
+                            position: relative;
+                            padding-top: 0.025rem;
+                        }
+                        i {
+                            width: .333333*2rem;
+                            height: .333333*2rem;
+                            margin: 0.06rem auto 0.025rem auto;
+                        }
+                        i.index {
+                            background: url(./../assets/hf1.png) no-repeat 50% 50%;
+                            background-size: 100%;
+                        }
+                        i.find {
+                            background: url(./../assets/hf2.png) no-repeat 50% 50%;
+                            background-size: 100%;
+                        }
+                        i.gift {
+                            background: url(./../assets/hff3.png) no-repeat 50% 50%;
+                            background-size: 100%;
+                        }
+                        i.cart {
+                            background: url(./../assets/hf4.png) no-repeat 50% 50%;
+                            background-size: 100%;
+                        }
+                        i.user {
+                            background: url(./../assets/hf5.png) no-repeat 50% 50%;
+                            background-size: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}

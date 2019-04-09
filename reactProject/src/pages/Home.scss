@@ -17,51 +17,52 @@ html,
 body {
   height: 100%;
 }
-.ant-carousel .slick-dots {
-    position: absolute;
-    bottom:2.25rem;
-    display: block;
-    width: 100%;
-    height: 5px;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    list-style: none;
-    li {
-        position: relative;
-        display: inline-block;
-        margin: 0 4px;
-        padding: 0;
-        text-align: center;
-        vertical-align: top;
-        button {
-            display: block;
-            width: 7px;
-            height: 7px;
-            border-radius: 50%;
-            padding: 0;
-            color: transparent;
-            font-size: 0;
-            background: #fff;
-            border: 0;
-            border-radius: 1px;
-            outline: none;
-            cursor: pointer;
-            opacity: 0.3;
-            transition: all 0.5s;
-        }
-    }
-    li.slick-active button {
-        width: 7px;
-        border-radius: 50%;
-        background: #fff;
-        opacity: 1;
-    }
-}
+
 #home {
   height: 100%;
   display: flex;
   flex-direction: column;
+    .ant-carousel .slick-dots{
+        position: absolute;
+        bottom:2.25rem;
+        display: block;
+        width: 100%;
+        height: 5px;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        list-style: none;
+        li {
+            position: relative;
+            display: inline-block;
+            margin: 0 4px;
+            padding: 0;
+            text-align: center;
+            vertical-align: top;
+            button {
+                display: block;
+                width: 7px;
+                height: 7px;
+                border-radius: 50%;
+                padding: 0;
+                color: transparent;
+                font-size: 0;
+                background: #fff;
+                border: 0;
+                border-radius: 1px;
+                outline: none;
+                cursor: pointer;
+                opacity: 0.3;
+                transition: all 0.5s;
+            }
+        }
+        li.slick-active button {
+            width: 7px;
+            border-radius: 50%;
+            background: #fff;
+            opacity: 1;
+        }
+    }
   #header{
     background: #DB3D38;
     position: fixed;
@@ -117,8 +118,13 @@ body {
             }
         }
     }
- 
-
+    .am-pull-to-refresh-indicator{
+        margin-top: .25rem
+    }
+    .am-icon-loading{
+        width: .666667*1.5rem;
+        height: .666667*1.5rem;
+    }
   .conten{
         flex: 1;
         overflow: auto;
@@ -179,7 +185,7 @@ body {
                         background: #ffffff;
                         border-radius: 0.25rem;
                         line-height: 0.5rem;
-                        font-size: 0.54rem;
+                        // font-size: 0.54rem;
                         color: #FC5D4E;
                     }
                 }
@@ -376,7 +382,6 @@ body {
                 margin-top: .173333*2rem;
                 .swiper-wrapper{
                     height: 2.4*2rem;
-
                     img{
                         margin-right:2px; 
                         width: 100%;
@@ -525,13 +530,14 @@ body {
                                     width: 100%;
                                     justify-content: space-between;
                                     li {
+                                        width: 33%;
                                         display: flex;
                                         flex-direction: column;
                                         justify-content: flex-start;
                                         align-items: flex-start;
                                         img {
-                                            width: 1.6*2rem;
-                                            height: 1.6*2rem;
+                                            width: 100%;
+                                            height: 1.44*2rem;
                                         }
                                         .goods-name {
                                             color: #333333;
@@ -770,12 +776,13 @@ body {
                             padding: .12*2rem .093333*2rem .12*2rem .16*2rem;
                             text-align: left;
                             dt.goods-name {
-                                display: block;
                                 font-size: 0.45rem;
                                 line-height: 0.5rem;
                                 color: #333333;
+                                text-overflow: ellipsis;
                                 overflow: hidden;
-                                overflow: hidden;
+                                width: 2.093333*2rem;
+                                white-space: nowrap;
                                 img {
                                     width: .22*2rem;
                                     margin-right: 0.05rem;
