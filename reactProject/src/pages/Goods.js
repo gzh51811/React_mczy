@@ -2,13 +2,16 @@ import React from 'react';
 import './Goods.scss';
 import { Carousel, BackTop } from 'antd';
 import url from 'url';
-import withAxios from '../hoc/withAxios';
+import withAxios from './../hoc/withAxios';
+
+
 
 class Goods extends React.Component {
     constructor() {
         super();
         this.state = {
-            datalist: []
+            datalist: [],
+            datalist1: []
         }
     }
 
@@ -22,26 +25,38 @@ class Goods extends React.Component {
                 id: query.id
             }
         })
+        // console.log((data.slice(0, 1))[0].goodsImageList)
 
-        console.log(data);
 
         this.setState({
-            datalist: data
+            datalist: data.slice(0, 1),
+            datalist1: (data.slice(0, 1))[0].goodsImageList
         })
-
+    }
+    //回到上一步
+    gotoBack() {
+        let { history } = this.props;
+        history.goBack();
+    }
+    gotoHome() {
+        window.scrollTo(0, 0);
+        let { history } = this.props;
+        history.push({
+            pathname: '/home'
+        })
     }
 
     render() {
         return <div id="goods">
             <header id="header" className="transparent cohesive header-linear-gradient">
-                <div className="header-l">
+                <div className="header-l" onClick={this.gotoBack.bind(this)}>
                     <i className="backDetail"></i>
                 </div>
                 <div className="header-title">
                     <h1>商品详情</h1>
                 </div>
                 <div className="header-r">
-                    <i className="toHome"></i>
+                    <i className="toHome" onClick={this.gotoHome.bind(this)}></i>
                     <i className="shareDetail"></i>
                 </div>
             </header >
@@ -50,24 +65,16 @@ class Goods extends React.Component {
             </div>
             <div className='conten'>
                 <div className='goodsbanner'>
-                    {
-                        this.state.datalist.map(goods => {
-                            return <Carousel autoplay className='ul1'>
-                                <li>
-                                    <img src={goods.goodsImageList[0].imageSrc} className="J-scroll-exclude" />
+                    <Carousel autoplay className='ul1'>
+                        {
+                            this.state.datalist1.map(goods => {
+                                // console.log(goods)
+                                return <li>
+                                    <img src={goods.imageSrc} className="J-scroll-exclude" />
                                 </li>
-                                <li>
-                                    <img src={goods.goodsImageList[1].imageSrc} className="J-scroll-exclude" />
-                                </li>
-                                <li>
-                                    <img src={goods.goodsImageList[2].imageSrc} className="J-scroll-exclude" />
-                                </li>
-                                <li>
-                                    <img src={goods.goodsImageList[3].imageSrc} className="J-scroll-exclude" />
-                                </li>
-                            </Carousel>
-                        })
-                    }
+                            })
+                        }
+                    </Carousel>
                 </div>
                 <div className="goods-detail-price">
                     <div className="goods-batch">
@@ -207,7 +214,7 @@ class Goods extends React.Component {
                 <div className='diandi'></div>
             </div>
 
-        </div>
+        </div >
     }
 }
 Goods = withAxios(Goods);

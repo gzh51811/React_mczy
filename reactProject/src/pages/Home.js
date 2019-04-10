@@ -60,6 +60,7 @@ class Home extends React.Component {
     gotoGoods(id) {
         // console.log(id);
         // console.log(this)
+        window.scrollTo(0, 0);
         let { history } = this.props;
 
         history.push({
@@ -70,11 +71,26 @@ class Home extends React.Component {
             }
         })
     }
+    gotoFound() {
+        // console.log(this.props)
+        window.scrollTo(0, 0);
+        let { history } = this.props;
+        history.push({
+            pathname: '/found'
+        })
+    }
+    gotoGift() {
+        window.scrollTo(0, 0);
+        let { history } = this.props;
+        history.push({
+            pathname: '/gift'
+        })
+    }
     render() {
         return <div id="home">
             <div className="nctouch-home-top fixed-Width" id="headerWrapper">
                 <header id="header" className="transparent cohesive header-linear-gradient">
-                    <div className="header-l">
+                    <div className="header-l" onClick={this.gotoGift.bind(this)}>
                         <img src={require("./../assets/fenlei.png")} />
                     </div>
                     <div className="header-wrap">
@@ -83,7 +99,7 @@ class Home extends React.Component {
                             <span className="search-input keyword" id="keyword">请输入关键词</span>
                         </div>
                     </div>
-                    <div className="header-r">
+                    <div className="header-r" onClick={this.gotoFound.bind(this)}>
                         <img src={require("./../assets/news.png")} />
                     </div>
                 </header >

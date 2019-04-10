@@ -34,7 +34,7 @@ class Gift extends React.Component {
             params: {
             }
         });
-        console.log(data);
+        // console.log(data);
         this.setState({
             datalist: data,
             datalist1: data.slice(5, 8)
@@ -55,8 +55,8 @@ class Gift extends React.Component {
     gotoGoods(id) {
         // console.log(id);
         // console.log(this)
+        window.scrollTo(0, 0);
         let { history } = this.props;
-
         history.push({
             pathname: '/goods/' + id,
             search: '?id=' + id,

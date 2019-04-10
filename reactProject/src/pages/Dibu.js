@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Dibu.scss';
 import withAxios from './../hoc/withAxios';
+import { withRouter } from 'react-router-dom';
 
 class Dibu extends Component {
     constructor() {
@@ -32,24 +33,48 @@ class Dibu extends Component {
         });
 
     }
+
+    gotoFound() {
+        // console.log(this.props)
+        window.scrollTo(0, 0);
+        let { history } = this.props;
+        history.push({
+            pathname: '/found'
+        })
+    }
+    gotoHome() {
+        window.scrollTo(0, 0);
+        let { history } = this.props;
+        history.push({
+            pathname: '/home'
+        })
+    }
+    gotoGift() {
+        window.scrollTo(0, 0);
+        let { history } = this.props;
+        history.push({
+            pathname: '/gift'
+        })
+    }
+
     render() {
         return <div className='footer'>
             <div className='diandi'></div>
-            <div className="bottom-bar-pannel J-bridge" style={{ zIndex: "10" }}>
+            <div className="bottom-bar-pannel J-bridge" style={{ zIndex: "90" }}>
                 <ul className="tab5">
-                    <li key='home'>
+                    <li key='home' onClick={this.gotoHome.bind(this)}>
                         <span className="bar-img">
                             <i className="index"></i>
                             <p>首页</p>
                         </span>
                     </li>
-                    <li key='found'>
+                    <li key='found' onClick={this.gotoFound.bind(this)}>
                         <span className="bar-img">
                             <i className="find"></i>
                             <p>发现</p>
                         </span>
                     </li>
-                    <li key='gift'>
+                    <li key='gift' onClick={this.gotoGift.bind(this)}>
                         <span className="bar-img">
                             <i className="gift"></i>
                             <p>礼礼相送</p>
@@ -74,5 +99,6 @@ class Dibu extends Component {
 
     }
 }
+Dibu = withRouter(Dibu);
 Dibu = withAxios(Dibu);
 export default Dibu;
