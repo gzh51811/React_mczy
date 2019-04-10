@@ -112,6 +112,13 @@ img {
         flex: 1;
         overflow: auto;
         margin-top: .6*2rem;
+        .ant-btn {
+            height: 100%;
+            width: 100%;
+            padding: 0;
+            background: #333;
+            border:none;
+        }
         .fix-block-r {
             width: .666667*2rem;
             position: fixed;
@@ -207,7 +214,6 @@ img {
             text-align: left;
             h3{
                 max-height: .533333*2rem;
-                overflow: hidden;
                 font-size: .24*2rem;
                 color: #282828;
                 line-height: .266667*2rem;
@@ -215,6 +221,8 @@ img {
                 word-wrap: break-word;
                 margin-bottom: .033333*2rem;
                 text-overflow: ellipsis;
+                overflow: hidden;
+                width: 100%;
                 display: -webkit-box;
                 -webkit-line-clamp: 2;
                 -webkit-box-orient: vertical;

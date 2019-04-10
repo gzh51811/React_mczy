@@ -1,11 +1,14 @@
 import React from 'react';
 import './Goods.scss';
-import { Carousel, BackTop } from 'antd';
+import { Carousel, BackTop, message, Button } from 'antd';
 import url from 'url';
 import withAxios from './../hoc/withAxios';
 
 
-
+const success = () => {
+    message.loading('正在加入购物车..', 1)
+        .then(() => message.success('加入购物车成功！', 1.5));
+};
 class Goods extends React.Component {
     constructor() {
         super();
@@ -43,6 +46,18 @@ class Goods extends React.Component {
         let { history } = this.props;
         history.push({
             pathname: '/home'
+        })
+    }
+    async gotoCart() {
+        let { axios, location } = this.props;
+        let { query } = url.parse(location.search, true);
+        let { data } = await axios.post('/api/goods', {
+            params: {
+                id: query.id
+            }
+        })
+        this.setState({
+
         })
     }
 
@@ -102,7 +117,7 @@ class Goods extends React.Component {
                 <div className="goods-detail-name">
                     {
                         this.state.datalist.map(goods => {
-                            return <h3>{goods.jingle}</h3>
+                            return <h3 style={{ "WebkitBoxOrient": "vertical" }}>{goods.goodsName}{goods.jingle}</h3>
                         })
                     }
                     <h4 className="jingle"></h4>
@@ -204,9 +219,15 @@ class Goods extends React.Component {
                             <span>客服</span></a> <a href="javascript:;" className="handle">
                             <em className="collection"></em> <span className="collectText">收藏</span></a>
                         <a href="javascript:;" className="handle"><em className="cart"></em> <span>购物车</span></a></div>
-                    <div className="action-list"><div><div><a href="javascript:;" className="action-btn-other w50  black-btn">
-                        <p>加入购物车</p></a> <a href="javascript:;" className="action-btn-other w50  red-btn"><p>立即购买</p>
-                        </a>
+                    <div className="action-list"><div><div>
+
+                        <Button href="javascript:;" className="action-btn-other w50  black-btn" onClick={success}>
+                            <p onClick={this.gotoCart.bind(this)}>加入购物车</p>
+                        </Button>
+
+                        <div href="javascript:;" className="action-btn-other w50  red-btn">
+                            <p>立即购买</p>
+                        </div>
                     </div>
                     </div>
                     </div>
