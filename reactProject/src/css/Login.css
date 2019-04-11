@@ -1,0 +1,119 @@
+body, html {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.login-top {
+  width: 100%;
+  height: 6rem;
+  background: url(../assets/loginBg.png) no-repeat;
+  background-size: contain;
+}
+.login-top img {
+  width: .4rem;
+  height: .4rem;
+  padding-left: .4rem;
+  padding-top: .4rem;
+}
+
+.login-kuang {
+  width: 8.966667rem;
+  height: 7.693333rem;
+  padding: 0 .88rem 1.466667rem;
+  margin: 0 .4rem;
+  position: absolute;
+  top: 4rem;
+  background: #fff;
+}
+.login-kuang .shurukuang li {
+  width: 7.466667rem;
+  height: 1.76rem;
+  position: relative;
+  border-bottom: .013333rem solid #ccc;
+}
+.login-kuang .shurukuang li input {
+  width: 100%;
+  height: .693333rem;
+  font-size: .4rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: none;
+  transform: translate(-50%, -50%);
+  -webkit-input-placeholder: #ccc;
+}
+.login-kuang button {
+  width: 7.466667rem;
+  height: 1.173333rem;
+  font-size: .453333rem;
+  background: #ccc;
+  margin-top: 1.2rem;
+  color: #fff;
+  border: none;
+}
+.login-kuang .botton-size {
+  margin-top: .533333rem;
+}
+.login-kuang .botton-size a {
+  font-size: .373333rem;
+  color: #ccc;
+}
+.login-kuang .botton-size a:nth-child(2) {
+  color: red;
+}
+
+.login-bottom {
+  width: 100%;
+  height: 3.413333rem;
+  position: absolute;
+  bottom: 0;
+}
+.login-bottom h1 {
+  width: 3.886667rem;
+  height: .64rem;
+  text-align: center;
+  margin-left: 2.8rem;
+  font-size: .346667rem;
+  color: #999;
+}
+.login-bottom h1:after {
+  content: '';
+  position: absolute;
+  top: .30rem;
+  right: 1.00667rem;
+  margin: auto;
+  background: #CCCCCC;
+  width: 2.13rem;
+  height: .053333rem;
+}
+.login-bottom h1:before {
+  content: '';
+  position: absolute;
+  top: .30rem;
+  left: .456457rem;
+  margin: auto;
+  background: #CCCCCC;
+  width: 2.13rem;
+  height: .053333rem;
+}
+.login-bottom .logintu {
+  margin-top: .533333rem;
+  position: relative;
+  height: 1.6rem;
+}
+.login-bottom .logintu .memberLogin {
+  width: 1.066667rem;
+  height: 1.066667rem;
+  background: url(../assets/memberLogin.png) no-repeat;
+  background-size: contain;
+  margin-left: 4rem;
+}
+.login-bottom .logintu a {
+  position: absolute;
+  bottom: 0;
+  left: 4rem;
+  color: #999;
+}
+
+/*# sourceMappingURL=Login.css.map */

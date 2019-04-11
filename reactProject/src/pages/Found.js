@@ -1,5 +1,5 @@
 import React from 'react';
-import './Found.scss';
+import './../css/Found.css';
 import Dibu from './Dibu';
 import withAxios from '../hoc/withAxios';
 class Found extends React.Component {

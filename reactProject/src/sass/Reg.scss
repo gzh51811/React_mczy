@@ -1,0 +1,85 @@
+body,html{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.reg-top{
+    width: 100%;
+    height: 6rem;
+    background: url(../assets/loginBg.png) no-repeat;
+    background-size: contain;
+    img{
+        width: .4rem;
+        height: .4rem;
+        padding-left: .4rem;
+        padding-top: .4rem;
+    }
+}
+.reg-kuang{
+    width: 8.966667rem;
+    height: 7.693333rem;
+    padding: 0 .88rem 1.466667rem;
+    margin: 0 .4rem;
+    position: absolute;
+    top: 4rem;
+    background: #fff;
+    .shurukuang{
+        li{
+            width: 7.466667rem;
+            height:1.76rem;
+            position: relative;
+            border-bottom:.013333rem solid #ccc; 
+            input{
+                width: 100%;
+                height: .693333rem;
+                font-size: .4rem;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                border: none;
+                transform: translate(-50%,-50%);
+                -webkit-input-placeholder:#ccc;
+            }
+            .yanzhengma{
+                position: absolute;
+                right: 0;
+                bottom:.133333rem;
+                div{
+                    width: 2.133333rem;
+                    height:.8rem;
+                    line-height: .8rem;
+                    text-align: center;
+                    border: .013333rem solid #ccc;
+                    background: #ccc;
+                    font-size: .433333rem;
+                    color: red;
+                }
+                a{
+                    font-size: .373333rem;
+                    color: #999;
+                }
+            }
+           
+        }
+    }
+    button{
+        width: 7.466667rem;
+        height: 1.173333rem;
+        font-size: .453333rem;
+        background: #ccc;
+        margin-top: 1.866667rem;
+        color: #fff;
+        border: none;
+    }
+    .botton-size{
+        margin-top: .533333rem;
+        a{
+            font-size: .373333rem;
+            color: #ccc;
+        }
+        a:nth-child(2){
+            color: red;
+        }
+    }
+    
+}

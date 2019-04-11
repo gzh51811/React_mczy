@@ -1,5 +1,5 @@
 import React from 'react';
-import './Goods.scss';
+import './../css/Goods.css';
 import { Carousel, BackTop, message, Button } from 'antd';
 import url from 'url';
 import withAxios from './../hoc/withAxios';

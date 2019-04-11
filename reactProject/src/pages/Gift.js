@@ -1,5 +1,5 @@
 import React from 'react';
-import './Gift.scss';
+import './../css/Gift.css';
 import Dibu from './Dibu';
 import { Menu, Carousel, BackTop } from 'antd';
 import { Switch, Route } from 'react-router-dom';

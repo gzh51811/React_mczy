@@ -1,5 +1,5 @@
 import React from 'react';
-import './Home.scss';
+import './../css/Home.css';
 import Dibu from './Dibu';
 import { Carousel, BackTop } from 'antd';
 import withAxios from '../hoc/withAxios';

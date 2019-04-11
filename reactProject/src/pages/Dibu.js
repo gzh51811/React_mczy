@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Dibu.scss';
+import './../css/Dibu.css';
 import withAxios from './../hoc/withAxios';
 import { withRouter } from 'react-router-dom';
 
@@ -16,6 +16,13 @@ class Dibu extends Component {
                 },
                 {
                     path: '/gift'
+                },
+                {
+                    path: '/cart'
+                },
+               
+                {
+                    path: '/mine'
                 }
             ]
         }
@@ -56,6 +63,20 @@ class Dibu extends Component {
             pathname: '/gift'
         })
     }
+    gotoCart() {
+        window.scrollTo(0, 0);
+        let { history } = this.props;
+        history.push({
+            pathname: '/cart'
+        })
+    }
+    gotoMine() {
+        window.scrollTo(0, 0);
+        let { history } = this.props;
+        history.push({
+            pathname: '/mine'
+        })
+    }
 
     render() {
         return <div className='footer'>
@@ -81,13 +102,13 @@ class Dibu extends Component {
                         </span>
                     </li>
                     <li>
-                        <span className="bar-img">
+                        <span className="bar-img" onClick={this.gotoCart.bind(this)}>
                             <i className="cart"></i>
                             <p>购物车</p>
                         </span>
                     </li>
                     <li>
-                        <span className="bar-img">
+                        <span className="bar-img" onClick={this.gotoMine.bind(this)}>
                             <i className="user"></i>
                             <p>我的</p>
                         </span>
