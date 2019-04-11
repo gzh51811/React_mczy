@@ -64,7 +64,7 @@ class Cart extends React.Component{
         if(res<2){
             this.setState({
                 goods:this.state.goods.map(item=>{
-                    return id==item.id ? Object.assign({},item,{num:res}) :item;
+                    return id==item.commonId ? Object.assign({},item,{qty:res}) :item;
                 })
             })
         }else{
@@ -80,7 +80,7 @@ class Cart extends React.Component{
                  })
                 this.setState({
                     goods:this.state.goods.map(item=>{
-                        return id==item.commonId ? Object.assign({},item,{goodsSaleNum:res-1}) :item;
+                        return id==item.commonId ? Object.assign({},item,{qty:res-1}) :item;
                     })
                 })
         }
@@ -106,7 +106,7 @@ class Cart extends React.Component{
                  })
                 this.setState({
                     goods:this.state.goods.map(item=>{
-                        return id==item.commonId ? Object.assign({},item,{goodsSaleNum:num+1}) :item;
+                        return id==item.commonId ? Object.assign({},item,{qty:num+1}) :item;
                     })
                 })
         }
@@ -123,8 +123,8 @@ class Cart extends React.Component{
         for(let i=0;i<this.state.goods.length;i++){
             if(this.state.checkedList.indexOf(id)<0){
             if(this.state.goods[i].commonId==id){
-                let num=this.state.title+this.state.goods[i].goodsSaleNum
-                let title1=this.state.price+this.state.goods[i].goodsSaleNum * this.state.goods[i].appPrice0
+                let num=this.state.title+this.state.goods[i].qty
+                let title1=this.state.price+this.state.goods[i].qty * this.state.goods[i].appPrice0
                 console.log(title1)
                 this.setState({
                     price:title1,
@@ -133,8 +133,8 @@ class Cart extends React.Component{
             }
         }else{
             if(this.state.goods[i].commonId==id){
-                let num=this.state.title-this.state.goods[i].goodsSaleNum
-                let title1=this.state.price-this.state.goods[i].goodsSaleNum * this.state.goods[i].appPrice0
+                let num=this.state.title-this.state.goods[i].qty
+                let title1=this.state.price-this.state.goods[i].qty * this.state.goods[i].appPrice0
                 console.log(title1)
                 this.setState({
                     price:title1,
@@ -190,15 +190,15 @@ class Cart extends React.Component{
           let num=0;
           let title1=0;
         for(let i=0;i<this.state.goods.length;i++){
-            num +=this.state.goods[i].goodsSaleNum
-            title1+=this.state.goods[i].goodsSaleNum * this.state.goods[i].appPrice0
+            num +=this.state.goods[i].qty
+            title1+=this.state.goods[i].qty * this.state.goods[i].appPrice0
             this.setState({
                 title:e.target.checked ? num
                 :0,
                 price:e.target.checked ? title1
                :0,
               checkedList: e.target.checked ? this.state.goods.map(item=>{
-                  return item.id;
+                  return item.commonId;
               })
               : [],
               indeterminate: false,
@@ -364,7 +364,7 @@ class Cart extends React.Component{
                                      <div className="price">￥{item.appPrice0}</div>
                                  </div>
                                  <div className='jia-jian'>
-                                     <span onClick={this.jian.bind(this,item.goodsSaleNum,item.commonId)}>-</span><input type="text" value={item.goodsSaleNum} onChange={this.onChange.bind(this)} min="1" max="10"/><span onClick={this.jia.bind(this,item.goodsSaleNum,item.commonId)}>+</span>
+                                     <span onClick={this.jian.bind(this,item.qty,item.commonId)}>-</span><input type="text" value={item.qty} onChange={this.onChange.bind(this)} min="1" max="10"/><span onClick={this.jia.bind(this,item.qty,item.commonId)}>+</span>
                                  </div>
                             </div>
                             </div>

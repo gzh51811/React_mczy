@@ -48,7 +48,7 @@ Router.get('/', urlencodedParser, jsonParser, (req, res) => {
             let {id,num} = req.query;
             console.log(id,num)
             let date=1;
-            let data =await collecton.updateOne({commonId:id*1},{$set:{goodsSaleNum:num*1+date*1}});
+            let data =await collecton.updateOne({commonId:id*1},{$set:{qty:num*1+date*1}});
             // let data = await collecton.find({id}).toArray();
             // console.log(data)
             res.send(data)
@@ -62,7 +62,7 @@ Router.get('/', urlencodedParser, jsonParser, (req, res) => {
             // console.log(num)
             // console.log(id)
             let date=1;
-            let data =await collecton.updateOne({commonId:id*1},{$set:{goodsSaleNum:num*1-date*1}});
+            let data =await collecton.updateOne({commonId:id*1},{$set:{qty:num*1-date*1}});
             // console.log(data)
             res.send(data)
             }  
