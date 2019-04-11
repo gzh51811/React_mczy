@@ -48,6 +48,13 @@ class Goods extends React.Component {
             pathname: '/home'
         })
     }
+    goCart() {
+        window.scrollTo(0, 0);
+        let { history } = this.props;
+        history.push({
+            pathname: '/cart'
+        })
+    }
     async gotoCart() {
         let { axios, location } = this.props;
         let { query } = url.parse(location.search, true);
@@ -218,7 +225,7 @@ class Goods extends React.Component {
                         <a href="javascript:;" className="handle"><em className="kefu"></em>
                             <span>客服</span></a> <a href="javascript:;" className="handle">
                             <em className="collection"></em> <span className="collectText">收藏</span></a>
-                        <a href="javascript:;" className="handle"><em className="cart"></em> <span>购物车</span></a></div>
+                        <a href="javascript:;" className="handle" onClick={this.goCart.bind(this)}><em className="cart"></em> <span>购物车</span></a></div>
                     <div className="action-list"><div><div>
 
                         <Button href="javascript:;" className="action-btn-other w50  black-btn" onClick={success}>
