@@ -20,7 +20,6 @@ class Dibu extends Component {
                 {
                     path: '/cart'
                 },
-               
                 {
                     path: '/mine'
                 }

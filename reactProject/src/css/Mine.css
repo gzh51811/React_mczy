@@ -241,11 +241,11 @@ body {
   padding-top: .133333rem;
 }
 
-.footer .diandi {
+#mine .footer .diandi {
   height: 1.0rem;
   width: 100%;
 }
-.footer .bottom-bar-pannel {
+#mine .footer .bottom-bar-pannel {
   position: fixed;
   left: 0;
   right: 0;
@@ -257,12 +257,12 @@ body {
   background: #fff;
   z-index: 10;
 }
-.footer .bottom-bar-pannel ul {
+#mine .footer .bottom-bar-pannel ul {
   overflow: hidden;
   height: 100%;
   position: relative;
 }
-.footer .bottom-bar-pannel ul li {
+#mine .footer .bottom-bar-pannel ul li {
   float: left;
   width: 20%;
   text-align: center;
@@ -271,40 +271,40 @@ body {
   font-size: 0.26667rem;
   position: relative;
 }
-.footer .bottom-bar-pannel ul li .bar-img {
+#mine .footer .bottom-bar-pannel ul li .bar-img {
   display: inline-block;
   height: 100%;
 }
-.footer .bottom-bar-pannel ul li .bar-img p {
+#mine .footer .bottom-bar-pannel ul li .bar-img p {
   color: #C37B7B;
 }
-.footer .bottom-bar-pannel ul li .bar-img i {
+#mine .footer .bottom-bar-pannel ul li .bar-img i {
   display: block;
   position: relative;
   padding-top: 0.025rem;
 }
-.footer .bottom-bar-pannel ul li .bar-img i {
+#mine .footer .bottom-bar-pannel ul li .bar-img i {
   width: 0.66667rem;
   height: 0.66667rem;
   margin: 0.06rem auto 0.025rem auto;
 }
-.footer .bottom-bar-pannel ul li .bar-img i.index {
+#mine .footer .bottom-bar-pannel ul li .bar-img i.index {
   background: url(./../assets/hf1.png) no-repeat 50% 50%;
   background-size: 100%;
 }
-.footer .bottom-bar-pannel ul li .bar-img i.find {
+#mine .footer .bottom-bar-pannel ul li .bar-img i.find {
   background: url(./../assets/hf2.png) no-repeat 50% 50%;
   background-size: 100%;
 }
-.footer .bottom-bar-pannel ul li .bar-img i.gift {
+#mine .footer .bottom-bar-pannel ul li .bar-img i.gift {
   background: url(./../assets/hf3.png) no-repeat 50% 50%;
   background-size: 100%;
 }
-.footer .bottom-bar-pannel ul li .bar-img i.cart {
+#mine .footer .bottom-bar-pannel ul li .bar-img i.cart {
   background: url(./../assets/hf4.png) no-repeat 50% 50%;
   background-size: 100%;
 }
-.footer .bottom-bar-pannel ul li .bar-img i.user {
+#mine .footer .bottom-bar-pannel ul li .bar-img i.user {
   background: url(./../assets/hff5.png) no-repeat 50% 50%;
   background-size: 100%;
 }

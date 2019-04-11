@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
 
 ul,
@@ -39,6 +40,7 @@ img {
 }
 
 #goods {
+  text-align: center;
   height: 100%;
   display: flex;
   flex-direction: column;

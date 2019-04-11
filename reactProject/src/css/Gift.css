@@ -24,6 +24,7 @@ body {
 
 #gift {
   background-color: #f5f5f5;
+  text-align: center;
 }
 #gift .ant-carousel .slick-dots {
   position: absolute;
